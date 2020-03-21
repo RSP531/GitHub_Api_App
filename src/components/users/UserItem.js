@@ -1,14 +1,8 @@
 import React, { Component } from 'react'
 
 class UserItem extends Component {
-    state = {
-        id: 'id',
-        login: 'RSP531',
-        avatar_url: 'https://avatars3.githubusercontent.com/u/50122770?v=4',
-        html_url: 'https://github.com/RSP531'
-      }
   render() {
-    const {login, html_url, avatar_url} = this.state;
+    const {login, html_url, avatar_url} = this.props.user;
     return (
       <div className="card text-center">
         <img 
