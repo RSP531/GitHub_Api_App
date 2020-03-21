@@ -28,7 +28,7 @@ class App extends Component {
       <div className="App">
         <Navbar/>
         <div className="container">
-        <Users users={this.state.users}/>
+        <Users users={this.state.users} loading={this.state.loading}/>
         </div>
       </div>
     );
