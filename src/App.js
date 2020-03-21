@@ -8,7 +8,7 @@ import './App.css';
 class App extends Component {
   state = {
     users:[],
-    loading: false
+    loading: false,
   }
 
   async componentDidMount(){
