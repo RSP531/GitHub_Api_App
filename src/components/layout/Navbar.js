@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'; //makes app more robust to check datatype
 
 export class Navbar extends Component {
   static defaultProps = {
