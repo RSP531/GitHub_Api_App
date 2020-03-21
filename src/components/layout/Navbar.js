@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; //makes app more robust to check datatype
 
-export class Navbar extends Component {
-  static defaultProps = {
-    title: 'Github Finder',
-    icon: 'fab fa-github'
-  };
-
-  static propTypes ={
-    title: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired
-  }
-  render() {
+const Navbar = (props) => {
     return (
       <div className="navbar bg-primary">
         <h1>
-        <i className={this.props.icon}/>
-          {this.props.title}
+        <i className={props.icon}/>
+          {props.title}
         </h1>
       </div>
     )
-  }
 }
 
+Navbar.defaultProps = {
+  title: 'Github Finder',
+  icon: 'fab fa-github'
+};
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired
+}
 export default Navbar
