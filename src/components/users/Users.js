@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import UserItem from './UserItem';
 
 export class Users extends Component {
-  state={
+  state = {
     users:[
       {
         id: '1',
