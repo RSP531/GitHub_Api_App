@@ -1,14 +1,16 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Alert from "./components/layout/Alert";
-import Users from "./components/users/Users";
+// import Users from "./components/users/Users";
 import User from "./components/users/User";
-import Search from "./components/users/Search";
+// import Search from "./components/users/Search";
 import About from "./components/pages/About";
 //import axios from "axios";
+import Home from "./components/pages/Home";
 import GithubState from "./context/github/GithubState";
 import AlertState from "./context/alert/AlertState";
+import NotFound from "./components/pages/NotFound";
 
 import "./App.css";
 
@@ -71,20 +73,21 @@ const App = () => {
                 <Route
                   exact
                   path="/"
-                  render={props => (
-                    <Fragment>
-                      <Search
-                      //searchUsers={searchUsers}
-                      //clearUsers={clearUsers}
-                      //showClear={users.length > 0 ? true : false}
-                      //setAlert={showAlert}
-                      />
-                      <Users
-                      //users={users}
-                      //loading={loading}
-                      />
-                    </Fragment>
-                  )}
+                  component={Home}
+                  // render={props => (
+                  //   <Fragment>
+                  //     <Search
+                  //     //searchUsers={searchUsers}
+                  //     //clearUsers={clearUsers}
+                  //     //showClear={users.length > 0 ? true : false}
+                  //     //setAlert={showAlert}
+                  //     />
+                  //     <Users
+                  //     //users={users}
+                  //     //loading={loading}
+                  //     />
+                  //   </Fragment>
+                  // )}
                 />
                 <Route exact path="/about" component={About} />
                 <Route
@@ -102,6 +105,7 @@ const App = () => {
                   //   />
                   // )}
                 />
+                <Route component={NotFound} />
               </Switch>
             </div>
           </div>
